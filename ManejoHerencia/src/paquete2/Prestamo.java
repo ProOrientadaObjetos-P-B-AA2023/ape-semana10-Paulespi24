@@ -1,14 +1,31 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package paquete2;
 
-/**
- *
- * @author reroes
- */
+package paquete2;
 public class Prestamo {
-    
+    public Persona beneficiario;
+    public double tiempoMeses;
+    public String ciudadPrestamo;
+
+    public Prestamo() {}
+
+    public Prestamo(Persona beneficiario, double tiempoMeses, String ciudadPrestamo) {
+        this.beneficiario = beneficiario;
+        this.tiempoMeses = tiempoMeses;
+        this.ciudadPrestamo = ciudadPrestamo;
+    }
+
+  
+
+    public void setCiudadPrestamo() {
+        this.ciudadPrestamo = ciudadPrestamo.toLowerCase();
+    }
+
+    @Override
+    public String toString() {
+        return "-- Beneficiario: --\n" + 
+                beneficiario.toString() +
+                "Tiempo de prestamo en meses = " + tiempoMeses + "\n" +
+                "Ciudad del prestamo = " + ciudadPrestamo + "\n";
+}   
+
 }
+
